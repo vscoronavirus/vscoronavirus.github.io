@@ -37,7 +37,7 @@
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
       if (!event.target.matches('#vscoronavirus-close')) return;
-      setCookie('vscoronavirus', true, 30);
+      setCookie('vscoronavirus', true, 1);
       container.remove();
     }, false);
   });
