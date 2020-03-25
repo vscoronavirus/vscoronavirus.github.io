@@ -20,7 +20,7 @@
   }
 
   ready(function () {
-    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://covid.joinzoe.com/" target="_blank">COVID Symptom Tracker for iOS and Android</a> now – <a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/coronavirus-symptoms-tracker-app-download-iphone-android-ios-apple-a9423346.html" target="_blank">Learn more here</a>.</p><span id="vscoronavirus-close">Dismiss</span></div>',
+    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://covid.joinzoe.com/" target="_blank">COVID Symptom Tracker for iOS and Android</a> now.</p><span id="vscoronavirus-close">Dismiss</span></div>',
       container = document.getElementById("vscoronavirus-banner");
     if (getCookie('vscoronavirus')) {
       if (container) {
