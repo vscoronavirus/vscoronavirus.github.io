@@ -1,0 +1,35 @@
+#vscoronavirus-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1em;
+  background: #ded100;
+  color: #333333;
+  font-family: sans-serif;
+}
+
+#vscoronavirus-banner div.vscoronavirus-content {
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+}
+
+#vscoronavirus-banner div.vscoronavirus-content h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#vscoronavirus-banner div.vscoronavirus-content p {
+  margin: 1em 0 0 0;
+  font-size: 16px;
+}
+
+#vscoronavirus-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+}
