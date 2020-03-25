@@ -33,7 +33,13 @@
 #vscoronavirus-banner div.vscoronavirus-content a {
   text-decoration: underline;
   font-weight: bold;
-  color: inherit;
+  color: #005eb8;
+}
+
+#vscoronavirus-banner div.vscoronavirus-content a:hover {
+  background-color: #005eb8;
+  box-shadow: 0 0 0 4px #005eb8;
+  color: #fff;
 }
 
 #vscoronavirus-close {
