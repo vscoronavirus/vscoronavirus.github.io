@@ -20,7 +20,7 @@
   }
 
   ready(function () {
-    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://covid.joinzoe.com/">COVID Symptom Tracker for iOS and Android</a> now – <a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/coronavirus-symptoms-tracker-app-download-iphone-android-ios-apple-a9423346.html">Learn more here</a>.</p><span id="vscoronavirus-close">Dismiss</span></div>',
+    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://covid.joinzoe.com/" target="_blank">COVID Symptom Tracker for iOS and Android</a> now – <a href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/coronavirus-symptoms-tracker-app-download-iphone-android-ios-apple-a9423346.html" target="_blank">Learn more here</a>.</p><span id="vscoronavirus-close">Dismiss</span></div>',
       container = document.getElementById("vscoronavirus-banner");
     if (getCookie('vscoronavirus')) {
       if (container) {
@@ -37,16 +37,9 @@
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
         if (event.target.matches('#vscoronavirus-banner a')) {
-          event.preventDefault();
           var url = event.target.getAttribute('href');
           if (window.ga && ga.loaded) {
-            ga('send', 'event', 'vscoronavirusAppLink', 'click', url, {
-              hitCallback: function () {
-                document.location = url;
-              }
-            });
-          } else {
-            document.location = url;
+            ga('send', 'event', 'vscoronavirusAppLink', 'click', url);
           }
         }
         if (!event.target.matches('#vscoronavirus-close')) {
