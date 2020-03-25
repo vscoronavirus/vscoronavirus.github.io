@@ -20,7 +20,8 @@
 
 #vscoronavirus-banner div.vscoronavirus-content h2 {
   margin: 0;
-  max-width: 90%;
+  max-width: 80%;
+  padding-right: 1em;
   font-size: 18px;
   font-weight: bold;
 }
