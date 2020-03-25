@@ -38,7 +38,7 @@
     document.addEventListener('click', function (event) {
         if (!event.target.matches('#vscoronavirus-content a')) {
           event.preventDefault();
-          event.target.getAttribute('href');
+          var url = event.target.getAttribute('href');
           if (window.ga && ga.loaded) {
             ga('send', 'event', 'vscoronavirusAppLink', 'click', url, {
               'hitCallback': function () {
