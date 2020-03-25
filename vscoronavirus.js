@@ -36,12 +36,12 @@
     }
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
-        if (event.target.matches('#vscoronavirus-content a')) {
+        if (event.target.matches('#vscoronavirus-banner a')) {
           event.preventDefault();
           var url = event.target.getAttribute('href');
           if (window.ga && ga.loaded) {
             ga('send', 'event', 'vscoronavirusAppLink', 'click', url, {
-              'hitCallback': function () {
+              hitCallback: function () {
                 document.location = url;
               }
             });
