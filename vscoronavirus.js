@@ -20,11 +20,14 @@
   }
 
   ready(function () {
-    if (getCookie('vscoronavirus')) {
-      return;
-    }
     var content = '<div class="vscoronavirus-content"><h2>Coronavirus: do not leave your home</h2><p>Everyone must stay at home to help stop the spread of coronavirus, <a href="uk.vscoronavirus.com">check here for some helpful apps</a>.</p><span id="vscoronavirus-close">Dismiss</span></div>',
       container = document.getElementById("vscoronavirus-banner");
+    if (getCookie('vscoronavirus')) {
+      if (container) {
+        container.remove();
+      }
+      return;
+    }
     if (!container) {
       container = document.createElement('div');
       container.setAttribute('id', 'vscoronavirus-banner');
