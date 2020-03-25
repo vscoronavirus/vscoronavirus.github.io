@@ -32,7 +32,7 @@
       container = document.createElement('div');
       container.setAttribute('id', 'vscoronavirus-banner');
       container.setAttribute('class', 'vscoronavirus-banner');
-      document.getElementsByName('body')[0].appendChild(container);
+      document.getElementsByTagName('body')[0].appendChild(container);
     }
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
