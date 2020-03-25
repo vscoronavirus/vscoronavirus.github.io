@@ -27,6 +27,12 @@
   font-size: 16px;
 }
 
+#vscoronavirus-banner div.vscoronavirus-content a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: inherit;
+}
+
 #vscoronavirus-close {
   position: absolute;
   right: 0;
