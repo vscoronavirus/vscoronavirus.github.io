@@ -36,9 +36,27 @@
     }
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
-      if (!event.target.matches('#vscoronavirus-close')) return;
-      setCookie('vscoronavirus', true, 1);
-      container.remove();
-    }, false);
+        if (!event.target.matches('#vscoronavirus-content a')) {
+          event.preventDefault();
+          event.target.getAttribute('href');
+          if (window.ga && ga.loaded) {
+            ga('send', 'event', 'vscoronavirusAppLink', 'click', url, {
+              'hitCallback': function () {
+                document.location = url;
+              }
+            });
+          } else {
+            document.location = url;
+          }
+        }
+        if (!event.target.matches('#vscoronavirus-close')) {
+          return;
+        }
+        setCookie('vscoronavirus', true, 1);
+        container.remove();
+      }
+      ,
+      false
+    );
   });
 })();
