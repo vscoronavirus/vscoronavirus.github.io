@@ -36,7 +36,7 @@
     }
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
-        if (!event.target.matches('#vscoronavirus-content a')) {
+        if (event.target.matches('#vscoronavirus-content a')) {
           event.preventDefault();
           var url = event.target.getAttribute('href');
           if (window.ga && ga.loaded) {
