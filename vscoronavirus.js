@@ -20,7 +20,7 @@
   }
 
   ready(function () {
-    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://covid.joinzoe.com/" target="_blank">COVID Symptom Tracker for iOS and Android</a> now.</p><span id="vscoronavirus-close">Dismiss</span></div>',
+    var content = '<div class="vscoronavirus-content"><h2>Join the fight against Coronavirus (COVID-19) and save lives.</h2><p>Get the <a href="https://bit.ly/c19st" target="_blank">COVID Symptom Tracker for iOS and Android</a> now.</p><span id="vscoronavirus-close">Dismiss</span></div>',
       container = document.getElementById("vscoronavirus-banner");
     if (getCookie('vscoronavirus')) {
       if (container) {
@@ -36,20 +36,11 @@
     }
     container.insertAdjacentHTML('beforeend', content);
     document.addEventListener('click', function (event) {
-        if (event.target.matches('#vscoronavirus-banner a')) {
-          var url = event.target.getAttribute('href');
-          if (window.ga && ga.loaded) {
-            ga('send', 'event', 'vscoronavirusAppLink', 'click', url);
-          }
-        }
-        if (!event.target.matches('#vscoronavirus-close')) {
-          return;
-        }
-        setCookie('vscoronavirus', true, 1);
-        container.remove();
+      if (!event.target.matches('#vscoronavirus-close')) {
+        return;
       }
-      ,
-      false
-    );
+      setCookie('vscoronavirus', true, 1);
+      container.remove();
+    }, false);
   });
 })();
